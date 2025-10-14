@@ -113,3 +113,27 @@ stages:
       hash: md5
       md5: 505f4da6babb8ade54e7120d47218c67
       size: 149208074
+  evaluation:
+    cmd: python src/models/evaluation.py
+    deps:
+    - path: data/processed/test_trans.csv
+      hash: md5
+      md5: 6a7f129b63c05b9922c237e6ae702b26
+      size: 1358276
+    - path: data/processed/train_trans.csv
+      hash: md5
+      md5: 607d3fb5ca7957bc02695329fe4322bd
+      size: 4060457
+    - path: models/model.joblib
+      hash: md5
+      md5: 9556dd4c2e1653d971f8ca7a5def9b7d
+      size: 149219656
+    - path: src/models/evaluation.py
+      hash: md5
+      md5: 4d616317fe83c6589132983e3d48667d
+      size: 6265
+    outs:
+    - path: run_information.json
+      hash: md5
+      md5: 3bfb3ad2ed8fa1b58a46d5ee809575f0
+      size: 220
