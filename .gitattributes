@@ -1,1 +1,2 @@
 models/delivery_time_pred_model.pkl filter=lfs diff=lfs merge=lfs -text
+*.pkl filter=lfs diff=lfs merge=lfs -text
