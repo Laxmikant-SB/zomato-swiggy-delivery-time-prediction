@@ -1,0 +1,5 @@
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = s3://zomato-swiggy-delivery-time-prediction
+    region = eu-north-1

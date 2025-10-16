@@ -180,13 +180,14 @@ if __name__ == "__main__":
     model_name = "delivery_time_pred_model"
     
     # save the model info
-    save_json_path = root_path / "run_information.json"
-    save_model_info(save_json_path=save_json_path,
-                    run_id=run_id,
-                    artifact_path=artifact_uri,
-                    model_name=model_name)
-    logger.info("Model Information saved")
-    
+save_json_path = root_path / "run_information.json"
+save_model_info(
+    save_json_path=save_json_path,
+    run_id=run.info.run_id,
+    artifact_path="models/delivery_time_pred_model.pkl",  # include .pkl
+    model_name="delivery_time_pred_model"  # can remain simple
+)
+
     
     
     
