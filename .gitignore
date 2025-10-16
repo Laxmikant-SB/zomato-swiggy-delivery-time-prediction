@@ -91,3 +91,5 @@ myenv/
 
 /run_information.json
 
+# in your .gitignore
+models/*.pkl
