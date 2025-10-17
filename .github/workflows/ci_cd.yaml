@@ -29,7 +29,8 @@ jobs:
           aws-region: eu-north-1
 
       - name: DVC Pull
-        run: dvc pull
+        run: |
+          dvc pull
 
       - name: Configure AWS Credentials for ECR
         uses: aws-actions/configure-aws-credentials@v4
