@@ -44,10 +44,9 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
   
-      - name: Build, tag, and push docker image to Amazon ECR
+      - name: Build, tag, and push Docker image to Amazon ECR
         env:
-          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          REPOSITORY: ${{ secrets.ECR_REPOSITORY_URI }}
+          REPOSITORY: ${{ secrets.ECR_REPOSITORY_URI }} # e.g. 544468261694.dkr.ecr.ap-south-1.amazonaws.com/delivery-time-prediction
           IMAGE_TAG: latest
         run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
