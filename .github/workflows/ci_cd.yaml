@@ -50,3 +50,5 @@ jobs:
         run: |
           docker build -t $REPOSITORY:$IMAGE_TAG .
           docker push $REPOSITORY:$IMAGE_TAG
+
+
