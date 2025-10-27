@@ -1,9 +1,200 @@
-Zomato-swiggy-delivery-time-prediction
-==============================
+#  Zomato & Swiggy Delivery Time Prediction using MLOps
 
-A ml project that predicts delivery time in min
+### 🚀 Overview
 
-Project Organization
+This project predicts the **delivery time** of food orders placed via **Zomato** and **Swiggy** using advanced **Machine Learning** and **MLOps** concepts.
+It automates every stage of the ML lifecycle — from **data collection → training → tracking → deployment** — ensuring full reproducibility and scalability.
+
+---
+
+## 🎯 Objectives
+
+* Predict accurate **delivery times** using real-world order data.
+* Implement a **modular MLOps pipeline** with **CI (Continuous Integration)**.
+* Integrate **MLflow**, **DVC**, **Docker**, and **AWS** for tracking and automation.
+* Enable **one-click deployment** on AWS EC2 using Docker containers.
+
+---
+
+## 🧩 Tech Stack
+
+| Category                     | Tools & Technologies        |
+| ---------------------------- | --------------------------- |
+| **Programming**              | Python                      |
+| **Framework**                | FastAPI                     |
+| **Modeling**                 | Scikit-learn, Pandas, NumPy |
+| **Tracking**                 | MLflow, DVC, Dagshub        |
+| **Version Control**          | Git + DVC                   |
+| **Pipeline Automation (CI)** | GitHub Actions              |
+| **Containerization**         | Docker                      |
+| **Cloud Deployment**         | AWS EC2 + AWS ECR           |
+| **Visualization**            | Matplotlib, Seaborn         |
+
+---
+
+## ⚙️ MLOps Lifecycle
+
+### 🔁 End-to-End Pipeline
+
+```mermaid
+flowchart TD
+A[Data Collection] --> B[Data Cleaning & Feature Engineering]
+B --> C[Model Training & Validation]
+C --> D[MLflow Tracking & Metrics Logging]
+D --> E[DVC for Data & Model Versioning]
+E --> F[Docker Image Build]
+F --> G[GitHub Actions CI]
+G --> H[AWS ECR Image Push]
+H --> I[AWS EC2 Deployment with FastAPI API]
+```
+
+✅ **Concepts Implemented:**
+
+* **Version Control (Git + DVC):** Tracks data & model versions.
+* **Experiment Tracking (MLflow):** Logs parameters, metrics & models.
+* **Continuous Integration (GitHub Actions):** Automates linting, testing, and image building.
+* **Containerization (Docker):** Reproducible runtime environments.
+* **Deployment (AWS EC2):** Scalable REST API using FastAPI.
+
+---
+
+## 🧠 Model Features
+
+* Delivery distance
+* Order value
+* Restaurant rating
+* Weather condition
+* Traffic level
+* Time of order (rush hour, weekend, etc.)
+
+---
+
+## 📊 Model Performance Metrics
+
+|     Metric    |     Value    |
+| :-----------: | :----------: |
+|  **Train R²** |    0.8916    |
+|  **Test R²**  |    0.8376    |
+| **Train MAE** | 2.47 minutes |
+|  **Test MAE** | 3.01 minutes |
+|  **CV Score** | 3.07 minutes |
+
+📈 The model shows strong generalization with minimal overfitting and high predictive accuracy.
+
+---
+
+## 📸 Visuals & Screenshots
+
+### 🧮 MLflow Experiment Tracking
+
+![alt text](<Screenshot 2025-10-27 223300-1.png>)
+```markdown
+![MLflow Tracking Dashboard](assets/mlflow_tracking.png)
+```
+
+Tracks model runs, parameters, and metrics automatically for each training cycle.
+
+---
+
+### 📦 CI Pipeline (GitHub Actions)
+
+![alt text](<Screenshot 2025-10-27 223640.png>)
+
+```markdown
+![CI/CD Pipeline](assets/ci_pipeline.png)
+```
+
+Every code push triggers **CI pipeline** → runs tests → builds Docker image → pushes to AWS ECR.
+
+---
+
+### 🧮 Data & DVC Pipeline (Dagshub)
+
+![alt text](<Screenshot 2025-10-27 223828.png>)
+
+```markdown
+![DVC + Dagshub Data Pipeline](assets/pipeline_dagshub.png)
+```
+
+---
+
+### 🌐 Live FastAPI App
+
+![alt text](<Screenshot 2025-10-27 120015.png>)
+![alt text](<Screenshot 2025-10-27 120036.png>)
+```markdown
+![Live FastAPI Deployment](assets/live_project.png)
+```
+
+---
+
+## 🧱 CI/CD Pipeline Highlights
+
+✅ **Continuous Integration (CI):**
+
+* Triggered on every push or pull request
+* Runs unit tests automatically
+* Builds Docker image
+* Pushes image to AWS ECR
+
+✅ **Continuous Deployment (Optional):**
+
+* EC2 instance pulls the latest image
+* Runs containerized FastAPI service
+
+---
+
+## 🐳 Docker Deployment Steps
+
+```bash
+# Build Docker Image
+docker build -t delivery_time_prediction .
+
+# Tag for ECR
+docker tag delivery_time_prediction:latest <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomato_swiggy_delivery_time_prediction:latest
+
+# Push to ECR
+docker push <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomato_swiggy_delivery_time_prediction:latest
+
+# Run on EC2
+docker run -d -p 8000:8000 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomato_swiggy_delivery_time_prediction:latest
+```
+
+---
+
+## 🧠 Results Summary
+
+✅ High model accuracy with R² = **0.83+**
+✅ Fully automated data & model tracking using **MLflow**
+✅ Reproducible pipeline with **DVC + GitHub Actions + Docker**
+✅ Successful **AWS EC2 deployment**
+✅ Real-time inference available via FastAPI endpoint
+
+---
+
+## 💡 Future Enhancements
+
+* Integrate **real-time traffic & weather API** for live updates.
+* Add **CD pipeline** for auto-deployment on model updates.
+* Implement **Grafana dashboards** for real-time monitoring.
+* Extend deployment to **AWS Lambda + API Gateway** for serverless scaling.
+
+---
+
+## 👨‍💻 Team
+
+| Name                      | Role                             |
+| ------------------------- | -------------------------------- |
+| **Laxmikant Babaleshwar** | MLOps Engineer & Deployment Lead |
+| **Sujal**                 | ML Model Developer               |
+| **Kajal**                 | Data Engineer                    |
+| **Mayuri**                | Visualization & Testing          |
+| **Asim**                  | Research & Documentation         |
+
+---
+
+## 📁 Folder Structure
+
 ------------
 
     ├── LICENSE
@@ -53,5 +244,3 @@ Project Organization
 
 
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
