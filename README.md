@@ -7,12 +7,13 @@ It automates every stage of the ML lifecycle — from **data collection → trai
 
 ---
 
-## 🎯 Objectives
+## 🎯 Problem Statement
 
-* Predict accurate **delivery times** using real-world order data.
-* Implement a **modular MLOps pipeline** with **CI (Continuous Integration)**.
-* Integrate **MLflow**, **DVC**, **Docker**, and **AWS** for tracking and automation.
-* Enable **one-click deployment** on AWS EC2 using Docker containers.
+Food delivery services face delays due to traffic, distance, and restaurant load.  
+Accurate delivery time prediction helps in:
+- Improving customer satisfaction  
+- Optimizing delivery partner allocation  
+- Enhancing overall operational efficiency
 
 ---
 
@@ -88,9 +89,7 @@ H --> I[AWS EC2 Deployment with FastAPI API]
 ### 🧮 MLflow Experiment Tracking
 
 ![alt text](<Screenshot 2025-10-27 223300-1.png>)
-```markdown
-![MLflow Tracking Dashboard](assets/mlflow_tracking.png)
-```
+
 
 Tracks model runs, parameters, and metrics automatically for each training cycle.
 
@@ -100,9 +99,7 @@ Tracks model runs, parameters, and metrics automatically for each training cycle
 
 ![alt text](<Screenshot 2025-10-27 223640.png>)
 
-```markdown
-![CI/CD Pipeline](assets/ci_pipeline.png)
-```
+
 
 Every code push triggers **CI pipeline** → runs tests → builds Docker image → pushes to AWS ECR.
 
@@ -112,9 +109,7 @@ Every code push triggers **CI pipeline** → runs tests → builds Docker image 
 
 ![alt text](<Screenshot 2025-10-27 223828.png>)
 
-```markdown
-![DVC + Dagshub Data Pipeline](assets/pipeline_dagshub.png)
-```
+
 
 ---
 
@@ -122,9 +117,7 @@ Every code push triggers **CI pipeline** → runs tests → builds Docker image 
 
 ![alt text](<Screenshot 2025-10-27 120015.png>)
 ![alt text](<Screenshot 2025-10-27 120036.png>)
-```markdown
-![Live FastAPI Deployment](assets/live_project.png)
-```
+
 
 ---
 
@@ -179,19 +172,6 @@ docker run -d -p 8000:8000 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomat
 * Implement **Grafana dashboards** for real-time monitoring.
 * Extend deployment to **AWS Lambda + API Gateway** for serverless scaling.
 
----
-
-## 👨‍💻 Team
-
-| Name                      | Role                             |
-| ------------------------- | -------------------------------- |
-| **Laxmikant Babaleshwar** | MLOps Engineer & Deployment Lead |
-| **Sujal**                 | ML Model Developer               |
-| **Kajal**                 | Data Engineer                    |
-| **Mayuri**                | Visualization & Testing          |
-| **Asim**                  | Research & Documentation         |
-
----
 
 ## 📁 Folder Structure
 
@@ -243,4 +223,11 @@ docker run -d -p 8000:8000 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomat
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
 
+--------
+
+## 📬 Contact
+--------
+* 📧 Email: laxmikantbabaleshwar07@gmail.com
+* 🌐 GitHub: github.com/Laxmikant-SB
+* 📍 Location: India
 --------
