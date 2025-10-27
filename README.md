@@ -157,11 +157,11 @@ docker run -d -p 8000:8000 <aws_account_id>.dkr.ecr.<region>.amazonaws.com/zomat
 
 ## 🧠 Results Summary
 
-✅ High model accuracy with R² = **0.83+**
-✅ Fully automated data & model tracking using **MLflow**
-✅ Reproducible pipeline with **DVC + GitHub Actions + Docker**
-✅ Successful **AWS EC2 deployment**
-✅ Real-time inference available via FastAPI endpoint
+✅ High model accuracy with R² = **0.83+**                                                                                          
+✅ Fully automated data & model tracking using **MLflow**                                                 
+✅ Reproducible pipeline with **DVC + GitHub Actions + Docker**                                                                              
+✅ Successful **AWS EC2 deployment**                                              
+✅ Real-time inference available via FastAPI endpoint                                                        
 
 ---
 
